@@ -1,38 +1,347 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost&family=Lato&family=Montserrat:wght@400;700&family=Oleo+Script&family=Open+Sans:wght@600&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400&display=swap');
+.container{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height:auto;
+}
+.content-box{
+  padding:1rem;
+}
+.client-basic-information{
+  width:71vw;
+  height:60vh;
+  margin-top:1rem;
+  margin-bottom:0px;
+  padding:2rem;
+  border: 1px solid silver;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  overflow-y: auto;
+  border-radius:10px;
+}
+.next-btn{
+  text-transform: none;
+  background-color: blue;
+}
+.diagnois>p,.Current-medication>p{
+  font-family: 'Poppins', sans-serif;
+  font-size:20px;
+  font-weight:600;
+}
+.diagnois-list,.diet-question-list{
+  display: grid;
+  grid-template-columns:repeat(5,1fr);
+  grid-template-rows: auto;
+  grid-gap:1rem;
+}
+#remove-btn{
+  display: flex;
+  align-items: center;
+  margin-top:3rem;
+  justify-content: center;
+  cursor: pointer;
+}
+.current-medication-list{
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows: auto;
+  grid-gap:1rem;
+}
+textarea{
+  resize: none;
+  padding:1rem;
+  height:8rem;
+  width:60rem;
+  border:1px solid silver;
+  border-radius:8px;
+}
+textarea:focus{
+  outline: none;
+}
+.diet-question-list{
+  font-family: 'Poppins', sans-serif;
+
+  font-weight:500;
+}
+.diagnois-list>div>p,.current-medication-list>div>p{
+  font-family: 'Poppins', sans-serif;
+
+  font-weight:500;
+}
+.add-more {
+  background-color: #0072ff;
+  font-family: 'Poppins', sans-serif;
+  margin-top:1rem;
+  width:8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  font-weight: 400 !important;
+  border-radius: 8px;
+  padding: 8px;
   color: white;
+  cursor: pointer;
+}
+.action-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action-buttons-box{
+  display: flex;
+  margin:1rem;
+  align-items: center;
+  gap:10rem;
+  justify-content: space-between;
+}
+#name{
+  border:1px solid silver;
+  padding:14px;
+  width:14rem;
+  border-radius:8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  
+}
+#step{
+  font-family: 'Poppins', sans-serif;
+  font-size:18px;
+  font-weight:700;
+}
+.client-basic-information::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.client-basic-information::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.client-basic-information::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+.client-inputs{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows:auto;
+  grid-gap:1rem;
+}
+.client-inputs>div>p{
+  font-family: 'Poppins', sans-serif;
+  
+  font-weight:500;
+}
+#name:focus{
+  outline:none;
+}
+.last-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:2rem;
+  flex-direction: column;
+}
+#last-section-p{
+  font-family: 'Poppins', sans-serif;
+  font-size:30px;
+  font-weight:600;
+}
+.last-section-img{
+  width:20rem;
+}
+.Login-page {
+  display: flex;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  height: 100vh;
+}
+
+.page-right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Signin {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid silver !important;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.Login-btn {
+  margin: 20rem;
+}
+
+#Signin>p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 600 !important;
+  letter-spacing: 3px;
+  /* margin: 1rem; */
+}
+
+#outlined-basic:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+#outlined-adornment-password:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.page-right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Signin {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid silver !important;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.logo-img {
+  width: 20rem;
+}
+
+.page-left-side {
+  width: 50%;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Login-page {
+  display: flex;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  height: 100vh;
+}
+
+.page-right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width:1024px) {
+  .client-inputs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:auto;
+    grid-gap:1px;
   }
-  to {
-    transform: rotate(360deg);
+  .container{
+    height: 80vh;
+  }
+  .diagnois-list,.diet-question-list{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-gap:1rem;
+  }
+  .current-medication-list{
+    grid-template-columns:repeat(2,1fr);
+  }
+  #name{
+    width:15rem;
+  }
+  textarea{
+    width:30rem;
+  }
+  .action-buttons-box{
+    display: flex;
+    margin:1rem;
+    align-items: center;
+    gap:5rem;
+    justify-content: space-between;
+  }
+  
+}
+@media only screen and (max-width:640px) {
+  .content-box{
+    padding:0px;
+  }
+  #step{
+    font-size:10px;
+  }
+  #name{
+    width:15rem;
+  }
+  .client-inputs{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:auto;
+    grid-gap:1px;
+  }
+  .diagnois-list,.diet-question-list{
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+    grid-template-rows: auto;
+    grid-gap:1rem;
+  }
+  .current-medication-list{
+    grid-template-columns:repeat(1,1fr);
+  }
+  textarea{
+    width: 15rem;
+  }
+  .action-buttons-box{
+    display: flex;
+    margin:1rem;
+    align-items: center;
+    gap:1rem;
+    justify-content: space-between;
+  }
+  #last-section-p{
+    font-family: 'Poppins', sans-serif;
+    font-size:20px;
+    text-align: center;
+    font-weight:600;
   }
 }
