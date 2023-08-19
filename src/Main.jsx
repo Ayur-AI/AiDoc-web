@@ -211,7 +211,7 @@ function Main() {
     if (activeStep === 3) {
       setActiveStep(4)
       const db = getDatabase();
-      const data=JSON.parse(localStorage.getItem('Patient-details'))
+      const data=JSON.parse(sessionStorage.getItem('Patient-details'))
       push(ref(db, 'Patient-details/'), {
         PatientDetails,
         Diagnosis,
