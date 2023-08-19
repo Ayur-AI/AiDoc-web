@@ -303,7 +303,7 @@ function Main() {
   };
   
   useEffect(()=>{
-    if(!localStorage.getItem('Patient-details')){
+    if(!sessionStorage.getItem('Patient-details')){
       Navigate("/Login")
     }
    },[])
