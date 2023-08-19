@@ -63,28 +63,7 @@ function Login() {
 //         console.log(error)
 //   }}
 
-    let handleLogin=async()=>{
-        try{
-        
-        }
-        catch(error){
-            if (error.response.status === 400) {
-                toast.error(error.response.data.message, {
-                  position: "top-center",
-                  limit: 1,
-                  transition: Zoom,
-                  autoClose: 2000,
-                  hideProgressBar: false,
-                  closeOnClick: false,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "dark"
-                })
-                console.log(error.response.data.message)
-              }
-        }
-    }
+
     let Login = async(e) => {
         e.preventDefault()
         await signInWithEmailAndPassword(auth, email, password)
@@ -102,7 +81,7 @@ function Login() {
               theme: "dark"
             })
             Navigate('/')
-            localStorage.setItem("Patient-details",
+            sessionStorage.setItem("Patient-details",
             JSON.stringify({
               Email:email,
               Doctor_name:Doctor,
