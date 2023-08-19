@@ -90,7 +90,7 @@ function Login() {
           
         })
         .catch((error) => {
-            const errorCode = error.code;
+            const errorcode = error.code;
             const errorMessage = error.message;
             console.log(errorMessage)
             if(errorMessage.includes('wrong')){
